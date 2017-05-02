@@ -1,4 +1,4 @@
-# Sample
+# Angular 4 GitHub Search
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
 
@@ -6,8 +6,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Code scaffolding 
 
+When you want to extend features, add component as per need.
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
 
 ## Build
