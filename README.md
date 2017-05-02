@@ -1,6 +1,6 @@
 # Angular 4 GitHub Search
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
+This project was built with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
 
 ## Development server
 
@@ -17,6 +17,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
+There are no Unit test yet for this project, feel free to contribute.
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Running end-to-end tests
