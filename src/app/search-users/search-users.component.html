@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row text-center">
+    <div class="col-md-12">
+      <h3>Who are contributing from your city?</h3>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col-md-12">
+      <div class="form-inline">
+        <input placeholder="Location" class="form-control input-lg input" #place (keyup.enter)="search(place.value); " />
+        <button class="btn btn-primary btn-lg" (click)="search(place.value);">Search</button>
+        <button class="btn btn-default btn-lg" (click)="place.value=''; results=[];">Clear</button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div [ngClass]="{'col-md-9': selected, 'col-md-12': !selected}">
+      <div class="user col-md-2 text-center" *ngFor="let user of results" (click)="getDetails(user.login)">
+        <div class="img_container">
+          <img src="{{user.avatar_url}}" class="img-circle" width="100" height="100">
+        </div>
+        <div class="details_container">
+          <a href="{{user.html_url}}" target="_blank" class="login_name">{{ user.login }}</a>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="results.length && selected" class="col-md-3">
+
+      <div class="box text-center">
+        <img src="{{selectedUser.avatar_url}}" class="img-responsive img-circle">
+        <div class="details">
+          <div *ngIf="selectedUser.name">
+            <a href="{{ selectedUser.html_url }}" target="_blank">
+              <h3>{{ selectedUser.name }} </h3>
+            </a>
+          </div>
+          <hr>
+          <div *ngIf="selectedUser.email">Email: {{ selectedUser.email }}</div>
+          <hr>
+          <div *ngIf="selectedUser.location">Location: {{ selectedUser.location }}</div>
+          <hr>
+          <div *ngIf="selectedUser.bio">Bio: {{ selectedUser.bio }}</div>
+          <hr>
+          <div *ngIf="selectedUser.company">Company: {{ selectedUser.company }}</div>
+          <hr>
+          <div *ngIf="selectedUser.blog">Blog: {{ selectedUser.blog }}</div>
+          <hr>
+          <div *ngIf="selectedUser.updated_at">Last Seen: {{ selectedUser.updated_at | date }}</div>
+          <hr>
+          <div *ngIf="selectedUser.public_repos">Repos: {{ selectedUser.public_repos }}</div>
+          <hr>
+          <div *ngIf="selectedUser.public_gists">Gists: {{ selectedUser.public_gists }}</div>
+          <hr>
+          <div *ngIf="selectedUser.followers">Followers: {{ selectedUser.followers }}</div>
+          <hr>
+          <button class="btn" (click)="selected = !selected">Hide</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

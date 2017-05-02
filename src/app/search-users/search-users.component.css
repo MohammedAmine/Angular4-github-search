@@ -1,0 +1,14 @@
+.user {
+  cursor: pointer;
+  padding: 1em;
+  margin: 1em;
+}
+
+.user:hover {
+  box-shadow: 1px 2px 3px #ccc;
+}
+
+.box > .details {
+  margin-top: 1em;
+  font-family: monospace;
+}
